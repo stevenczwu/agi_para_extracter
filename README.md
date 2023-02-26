@@ -3,7 +3,7 @@ Extract screw position and further parameters of small motor and its components 
 
 How to use:
 
-    download "para_extracter" and use it as a python package
+    download folder "para_extracter" and use it as a python package
 
 Interface summary:
 
@@ -11,16 +11,16 @@ Interface summary:
 
         # necessary:
         extracter = ParaExtracter()                                             # Define the object
-        extracter.load_model()                                                  # Dload the trained model
+        extracter.load_model()                                                  # Load the trained model
         extracter.load_pcd_data(
-            'D:/Jupyter/AgiProbot/GUI_agi-master/pcdfile/A1_13_screws.pcd')     # load scaned pointcloud data
+            'D:/Jupyter/AgiProbot/GUI_agi-master/pcdfile/A1_13_screws.pcd')     # Load scaned pointcloud data
         extracter.run()                                                         # Run the model
 
         # optional: get what you need using following functions
         segementation_prediction = extracter.get_segmentation_prediction()
         classification_prediction = extracter.get_classification_prediction()
 
-        if extracter.if_cover_existence(): # The motor can has a cover, which means no cover screw, or no cover, which means no visible gear.
+        if extracter.if_cover_existence(): # The motor can has a cover, which means no cover screw. Or no cover, which means no visible gear.
             bolt_positions, cover_screw_normal, bolt_num, bolt_piont_clouds = extracter.find_screws()
         else:
             gear_piont_clouds, gearpositions = extracter.find_gears()
