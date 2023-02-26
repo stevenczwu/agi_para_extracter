@@ -3,7 +3,7 @@ Extract screw position and further parameters of small motor and its components 
 
 How to use:
 
-    download "para_extracter" and use it as a python package
+    download folder "para_extracter" and use it as a python package
 
 Interface summary:
 
