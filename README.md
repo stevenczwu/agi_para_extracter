@@ -25,7 +25,7 @@ Interface summary:
         else:
             gear_piont_clouds, gearpositions = extracter.find_gears()
 
-        # further data: just load the pcd file, run the model, and using funtions to get further parameters.
+        # further data: just load further pcd file, run the model, and using funtions to get parameters.
         extracter.load_pcd_data('D:/Jupyter/AgiProbot/GUI_agi-master/pcdfile/B1_17_gear.pcd')
         extracter.run()
         segementation_prediction = extracter.get_segmentation_prediction()
