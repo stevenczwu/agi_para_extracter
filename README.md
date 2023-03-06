@@ -20,7 +20,9 @@ Interface summary:
         segementation_prediction = extracter.get_segmentation_prediction()
         classification_prediction = extracter.get_classification_prediction()
 
-        if extracter.if_cover_existence(): # The motor can has a cover, which means no cover screw. Or no cover, which means no visible gear.
+        if extracter.if_cover_existence(): 
+            # Motor with a cover -> with cover screws, no visible gear. 
+            # Motor without cover-> with visible gear, no cover screws.
             bolt_positions, cover_screw_normal, bolt_num, bolt_piont_clouds = extracter.find_screws()
         else:
             gear_piont_clouds, gearpositions = extracter.find_gears()
